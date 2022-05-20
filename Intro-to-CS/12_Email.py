@@ -1,4 +1,4 @@
-'''
+"""
 This program will do the following:
 If provided a text file, read the file.
 If not, read or create the file specified by the user.
@@ -9,7 +9,7 @@ Store the names and email addresses of the file in a dictionary, then
     3) Change an email address.
     4) Delete a name and email address.
     5) Save and exit the address book.
-'''
+"""
 
 # Global constants for menu choices
 SEARCH = 1
