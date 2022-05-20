@@ -1,4 +1,4 @@
-; w1421760-Assignment_10.asm
+; string.asm
 ; Weston Gibson, CISP 310
 ; 10 April 2022
 ;
@@ -14,7 +14,7 @@ include io.h
 .DATA
 
   ; introduction
-  l_intro   BYTE  "w1421760-Assignment-10.asm", 0
+  l_intro   BYTE  "string.asm", 0
   p_intro   BYTE  "This program will accept two strings and output the concatenated string.", 0
 
   ; input prompts
