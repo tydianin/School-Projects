@@ -1,4 +1,4 @@
-; w1421760-Pennies_for_Pay.asm
+; pennies.asm
 ; Weston Gibson, CISP 310
 ; 20 March 2022
 ;
@@ -22,7 +22,7 @@ include io.h
 .DATA
 
    ; intro
-   l_intr  BYTE  "w1421760-Pennies_for_Pay.asm", 0
+   l_intr  BYTE  "pennies.asm", 0
    p_intr  BYTE  "Please enter integer numbers only.", 0
    
    ; input
