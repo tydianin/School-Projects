@@ -1,4 +1,4 @@
-; w1421760-Assignment_8-3.asm
+; scores.asm
 ; Weston Gibson, CISP 310
 ; 10 April 2022
 ;
@@ -15,7 +15,7 @@ include io.h
 .DATA
 
   ; introduction
-  l_intro   BYTE  "w1421760-Assignment_8-3.asm", 0
+  l_intro   BYTE  "scores.asm", 0
   p_intro   BYTE  "This program will accept up to 10 test scores between 0 and 100 points, then show how many perfect scores were entered.", 0
 
   ; input
