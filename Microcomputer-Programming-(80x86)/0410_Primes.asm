@@ -1,4 +1,4 @@
-; w1421760-Assignment_8-1.asm
+; primes.asm
 ; Weston Gibson, CISP 310
 ; 10 April 2022
 ;
@@ -14,7 +14,7 @@ include io.h
 .DATA
 
   ; introduction
-  l_intro   BYTE  "w1421760-Assignment_8-1.asm", 0
+  l_intro   BYTE  "primes.asm", 0
   p_intro   BYTE  "This program will display the first 100 prime numbers.", 0
 
   ; output
