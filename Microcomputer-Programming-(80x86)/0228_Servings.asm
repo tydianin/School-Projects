@@ -1,4 +1,4 @@
-; w1421760-Assignment4-3.asm
+; servings.asm
 ; Weston Gibson, CISP 310
 ; 28 February 2022
 
@@ -27,7 +27,7 @@ include io.h
 .DATA
 
 	; intro
-	l_intr	BYTE	"w1421760-Assignment4-3.asm", 0
+	l_intr	BYTE	"servings.asm", 0
 	p_intr	BYTE	"This program will calculate the number of calories consumed.", 0
 
 	; input prompts
