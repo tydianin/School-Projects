@@ -1,4 +1,4 @@
-; w1421760-Assignment6.asm
+; weight.asm
 ; Weston Gibson, CISP 310
 ; 20 March 2022
 
@@ -22,7 +22,7 @@ include io.h
 .DATA
 
    ; intro
-   l_intr  BYTE  "w1421760-Assignment6.asm", 0
+   l_intr  BYTE  "weight.asm", 0
    p_intr  BYTE  "Please enter integer numbers only.", 0
    
    ; input
