@@ -1,4 +1,4 @@
-; w1421760-Assignment4-2.asm
+; expenses.asm
 ; Weston Gibson, CISP 310
 ; 28 February 2022
 
@@ -26,7 +26,7 @@ include io.h
 .DATA
 
 	; intro
-	l_intr	BYTE	"w1421760-Assignment4-2.asm", 0
+	l_intr	BYTE	"expenses.asm", 0
 	p_intr	BYTE	"Please enter expenses rounded to the nearest dollar.", 0
 
 	; input prompts
