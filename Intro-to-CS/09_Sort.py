@@ -1,7 +1,9 @@
-"""This program will take a list of 20 numbers
+"""
+This program will take a list of 20 numbers
 provided by the user and return the lowest,
 highest, and total of the list, without using
-built-in functions."""
+built-in functions.
+"""
 
 def main():
     
