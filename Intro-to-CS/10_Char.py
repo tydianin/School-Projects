@@ -1,4 +1,5 @@
-""" Ok, this was very last-minute. Let me know if
+"""
+Ok, this was very last-minute. Let me know if
 anything in here breaks. I tried a few new things.
 
 This program will take a specified text file and
@@ -6,7 +7,8 @@ read the contents to determine and return the:
 Number of UPPERCASE letters in the file;
 Number of lowercase letters in the file;
 Number of digits in the file (1,2,3);
-Number of whitespace characters in the file ( )."""
+Number of whitespace characters in the file ( ).
+"""
 
 # The brains. The brawns. The main.
 def main():
