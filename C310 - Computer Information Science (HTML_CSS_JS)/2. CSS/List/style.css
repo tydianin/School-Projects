@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background-color: #EDF4FB;
+}
+h1 {
+  color: rgb(26, 69, 107);
+}
+li {
+  color: #296CA8;
+}
+span.age {
+  font-style: italic;
+}
+span.recommended {
+  background-color: yellow;
+  text-decoration: underline;
+}
