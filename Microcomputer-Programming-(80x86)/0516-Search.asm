@@ -1,4 +1,4 @@
-; w1421760-Final.asm
+; Final.asm
 ; Weston Gibson, CISP 310
 ; 16 May 2022
 
@@ -10,7 +10,7 @@ include io.h
 .DATA
 
   ; introduction
-  intro_label   BYTE  "w1421760-Final.asm", 0
+  intro_label   BYTE  "Weston Gibson Final", 0
   intro_prompt  BYTE  "This program will accept a key number and 10 search numbers.", 0
 
   ; base variable
