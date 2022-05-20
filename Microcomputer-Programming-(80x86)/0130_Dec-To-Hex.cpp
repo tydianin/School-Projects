@@ -1,11 +1,10 @@
 /*
-dec_to_hex.cpp
+dec-to-hex.cpp
 Weston Gibson, CISP 310
 30 January 2022
 */
 
-// this program will convert a binary number to decimal, then that decimal
-// number to hexadecimal
+// converts a binary number to decimal, then to hexadecimal
 
 #include <algorithm>
 #include <iostream>
@@ -33,7 +32,7 @@ int main() {
   return 0;
 }
 
-// function for power of 2
+// raises base to exp
 int Power(int base, int exp) {
   int result = 1;
   for (int i = 0; i < exp; i++) {
@@ -42,19 +41,17 @@ int Power(int base, int exp) {
   return result;
 }
 
-// function for converting string binary to integer decimal
+// converts string binary to int decimal
 int Dec(string bin) {
   int dec = 0;
-  int len = bin.length();
-  for (int i = 0; i < len; i++) {
-    if (bin[i] == '1') {
+  for (auto &ch : bin) {
+    if (bin[i] == '1')
       dec += Power(2, len - i - 1);
-    }
   }
   return dec;
 }
 
-// function for converting decimal to hexadecimal
+// converts int decimal to string hex
 string Hex(int dec) {
   string hex = "";
   int remainder = 0;
