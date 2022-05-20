@@ -1,4 +1,4 @@
-; w1421760-Assignment4-1.asm
+; mpg.asm
 ; Weston Gibson, CISP 310
 ; 28 February 2022
 
@@ -23,7 +23,7 @@ include io.h
 .DATA
 
 	; intro
-	l_intr	BYTE	"w1421760-Assignment4-1.asm", 0
+	l_intr	BYTE	"mpg.asm", 0
 	p_intr	BYTE	"Please enter estimates rounded to the nearest unit.", 0
 
 	; input prompts
