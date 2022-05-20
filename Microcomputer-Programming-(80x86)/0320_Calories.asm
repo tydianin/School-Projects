@@ -1,4 +1,4 @@
-; w1421760-Calories_Burned.asm
+; calories.asm
 ; Weston Gibson, CISP 310
 ; 20 March 2022
 ;
@@ -19,7 +19,7 @@ include io.h
 .DATA
 
    ; intro
-   l_intr  BYTE  "w1421760-Calories_Burned.asm", 0
+   l_intr  BYTE  "calories.asm", 0
    p_intr  BYTE  "This program will display calories burned.", 0
    
    ; output
