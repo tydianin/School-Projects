@@ -1,4 +1,4 @@
-; w1421760-Macro_Example.asm
+; macro.asm
 ; Weston Gibson, CISP 310
 ; 21 March 2022
 
@@ -16,7 +16,7 @@ include io.h
 .DATA
 
    ; intro
-   l_intr  BYTE  "w1421760-Macro_Example.asm", 0
+   l_intr  BYTE  "macro.asm", 0
    p_intr  BYTE  "Please enter integer numbers only.", 0
    
    ; input
