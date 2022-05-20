@@ -1,6 +1,8 @@
-''' This program will return class information to a user when provided a course number.
+"""
+This program will return class information to a user when provided a course number.
 The class information provided will be the 1. Room number, 2. Instructor, and 3. Meeting time.
-Presumably this program will later be used integrated in database queries or the like.'''
+Presumably this program will later be used integrated in database queries or the like.
+"""
 
 # The brains. The brawns. The main.
 def main():
