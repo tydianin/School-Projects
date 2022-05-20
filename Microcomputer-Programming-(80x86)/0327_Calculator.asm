@@ -1,4 +1,4 @@
-; w1421760-Calculator.asm
+; calculator.asm
 ; Weston Gibson, CISP 310
 ; 27 March 2022
 ;
@@ -22,7 +22,7 @@ include io.h
 .DATA
 
   ; intro
-  l_intro      BYTE  "w1421760-Calculator.asm", 0
+  l_intro      BYTE  "calculator.asm", 0
   p_intro      BYTE  "To end the program, enter 'e' at any prompt.", 0
 
   ; standard input/output
