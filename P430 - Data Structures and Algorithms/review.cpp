@@ -2,14 +2,18 @@
 Assignment 1
 Weston Gibson, CISP 430
 25 August 2022
+
+Uses C++17 in accordance with GCC 12.2
 */
 
-#include <ctime>
-#include <fstream>
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <vector>
+// C++ library headers
+#include <algorithm>    // shuffle(), copy()
+#include <fstream>      // ifstream, getline(), good(), fail(), eof()
+#include <iomanip>      // setprecision(), setw(), setfill()
+#include <iostream>     // cin, cout
+#include <sstream>      // stringstream, getline()
+#include <string>       // string, stoi, to_string()
+#include <vector>       // vector, begin(), end(), shrink_to_fit(), clear(), push_back()
 
 using namespace std;
 
@@ -33,7 +37,7 @@ class Prompt {
   Prompt(string line) {
     string word;
 
-    stringstream str(line);
+    stringstream s(line);
   }
 };
 
