@@ -9,12 +9,12 @@ Uses C++17 in accordance with GCC 12.2
 // C++ library headers
 #include <algorithm>  // shuffle()
 #include <fstream>    // ifstream, getline(), good(), is_open()
-#include <iomanip>    // setprecision(), setw()
+#include <iomanip>    // setprecision()
 #include <iostream>   // cin, cout
-#include <random>     // random_device, mt19937
+#include <random>     // random_device, default_random_engine
 #include <sstream>    // stringstream, getline()
-#include <string>     // string, stoi, to_string()
-#include <vector>     // vector, begin(), end(), push_back()
+#include <string>     // string, stoi
+#include <vector>     // vector, begin(), end(), back(), push_back(), pop_back(), size
 
 using namespace std;
 
@@ -109,7 +109,7 @@ int main() {
     i++;
     count++;
 
-    cout << CLEAR_SCREEN;
+    // cout << CLEAR_SCREEN;
     cout << "Question " << i << ": ";
     item.getQuestion();
 
@@ -122,7 +122,8 @@ int main() {
   double score = (double)grade / count * 100.0;
 
   // inform user of their results
-  cout << CLEAR_SCREEN << "Test complete!\n"
+  // cout << CLEAR_SCREEN << "Test complete!\n"
+  cout << "Test complete!\n"
        << "Your score: " << fixed << setprecision(2) << score << "%";
 
   // finished
