@@ -3,3 +3,4 @@
 ## Assignments
 
 Assignment 1 - C++ Review
+Assignment 3 - Lists
