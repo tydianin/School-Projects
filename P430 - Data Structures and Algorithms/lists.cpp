@@ -87,7 +87,7 @@ class List {
   virtual const Elem& getValue() const = 0;
 };
 
-// Linked List Node with freelist template from figure 4.11
+// Link Node with freelist template from figure 4.11
 template <typename Elem>
 class Link {
  private:
