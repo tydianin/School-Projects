@@ -67,10 +67,12 @@ class AStack : public Stack<T> {
 
   // print stack in reverse
   void midterm() {
-    while (top > 0) {
-      cout << pop();
-      top > 0 ? cout << ", " : cout << "\n";
+    T temp;
+    if (top > 0) {
+      temp = pop();
+      midterm();
     }
+    cout << temp;
   }
 };
 
@@ -109,14 +111,14 @@ int main() {
 }
 
 int InToInt(string in) {
-  int num = stoi(in);
+  int num;
 
   try {
     num = stoi(in);
-  } catch (invalid_argument) {
+  } catch (const invalid_argument& ia) {
     cout << "Please enter an integer only.\n";
     num = -1;
-  } catch (out_of_range) {
+  } catch (const out_of_range& oor) {
     cout << "Too many elements. Please try a smaller count.\n";
     num = -1;
   } catch (...) {
