@@ -75,13 +75,8 @@ class LList : public List<T> {
   Node<T>* head;
   Node<T>* fence;
   Node<T>* tail;
-  int left;
-  int right;
 
-  void init() {
-    fence = tail = head = new Node<T>;
-    left = right = 0;
-  }
+  void init() { fence = tail = head = new Node<T>; }
 
   // used during cleanup
   void removeall() {
@@ -97,29 +92,18 @@ class LList : public List<T> {
   LList(int size = 10) { init(); }
   ~LList() { removeall(); }
 
-  // append
+  // standard operations
   void append(const int& element) {
     tail = tail->next = new Node<T>(element, NULL);
-    right++;
   }
-
-  // traverse list
-  void start() {
-    fence = head;
-    right += left;
-    left = 0;
-  }
-
+  void start() { fence = head; }
   void next() {
-    if (fence != tail) {
+    if (fence != tail)
       fence = fence->next;
-      right--;
-      left++;
-    }
   }
 
   // print list total
-  void getTotal() {
+  void midterm() {
     int sum = 0;
 
     start();
@@ -143,6 +127,6 @@ int main() {
   }
 
   // complete
-  midterm.getTotal();
+  midterm.midterm();
   return 0;
 }
