@@ -111,29 +111,33 @@ class LList : public Node<T> {
       // check if single int is palindromic
       if (head == tail) {
         int number = head->element;
-        while (number != 0) {
-          reverse = 10 * reverse + number % 10;
+        int temp = number;
+        while (temp != 0) {
+          reverse = 10 * reverse + temp % 10;
+          temp /= 10;
         }
         number == reverse ? success = true : success = false;
+        cout << "\n" << number << " is ";
       }
 
-      // check if a list of ints is palindromic
+      // uses pinsir to check if list is palindromic
       else {
+        // stops running when fences are on same element
         while (head2 != tail2 && success) {
           // break when two sides aren't the same
           if (head2->element != tail2->element) {
             success == false;
           }
-            // ends loop if odd number of elements
-          else if (head2->next != tail2->previous) {
+          // otherwise continue
+          else {
             head2 = head2->next;
             tail2 = tail2->previous;
           }
         }
+        cout << "\nProvided list is ";
       }
 
-      success ? cout << "\nPalindrome!\n\n"
-              : cout << "\nNot a palindrome...\n\n";
+      success ? cout << "a palindrome!\n\n" : cout << "not a palindrome.\n\n";
     }
   }
 };
@@ -142,52 +146,56 @@ int InToInt(string, bool&);
 
 int main() {
   // get situated
-  string in;
-  int num;
-  bool success;
-
+  string input = " ";
+  int number, counter = 1;
+  bool success = false;
   LList final = LList<int>();
-  // LList final = LList<char>();
+
+  // prompt the user
+  cout << "\033[2J\033[1;1H"
+       << "Please enter a list of integers.\n"
+       << "Press enter after each integer.\n"
+       << "When finished, press enter without entering data.\n\n";
 
   // get the stuff
-  cout << "\033[2J\033[1;1H"
-       << "Enter numbers. When done, press enter without data.\n";  
-  do {
-    getline(cin, in);
-    // for (int i = 0; i < in.length(); i++) {
-    //   final.push(in[i]);
-    // }
+  while (input != "") {
+    success = false;
+    cout << "Number " << counter << ": ";
+    getline(cin, input);
 
-    if (!in.empty()) {
-      num = InToInt(in, success);
+    if (!input.empty()) {
+      number = InToInt(input, success);
     }
 
     if (success) {
-      final.push(num);
+      final.push(number);
+      counter++;
     }
-  } while (in != "");
+  }
 
   // complete
   final.final();
   return 0;
 }
 
-int InToInt(string in, bool& success) {
-  int num;
+int InToInt(string input, bool& success) {
+  int number = -1;
 
+  // tries to stoi, catches errors or negatives
   try {
-    num = stoi(in);
-    success = true;
+    number = stoi(input);
+    if (number >= 0) {
+      success = true;
+    } else {
+      cout << "Please enter positive integers only.\n";
+    }
   } catch (const invalid_argument& ia) {
     cout << "Please enter an integer only.\n";
-    num = -1;
   } catch (const out_of_range& oor) {
-    cout << "Too many elements. Please try a smaller number.\n";
-    num = -1;
+    cout << "Too many digits. Please try a smaller integer.\n";
   } catch (...) {
     cout << "Unhandled exception. Please try again.\n";
-    num = -1;
   }
 
-  return num;
+  return number;
 }
